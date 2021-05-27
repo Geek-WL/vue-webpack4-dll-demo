@@ -8,11 +8,16 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
-
+import $ from 'jquery'
 export default {
   name: 'Home',
   components: {
     HelloWorld
+  },
+  created() {
+    $.get('/user', function (res) {
+      console.log(res)
+    })
   }
 }
 </script>
