@@ -45,9 +45,9 @@ module.exports = {
           // dll文件位置（需要把dll打包好的文件注入）
           filepath: path.resolve(__dirname, 'dll', file),
           // dll引用路径
-          // publicPath: './vendor',
+          // publicPath: './vendors',
           // dll最终输出的目录
-          // outputPath: './vendor'
+          outputPath: './vendors' // 表示打包后输出至（存放的目录）dist/vendors/   默认dist/
         }))
       } else if (file.endsWith('.json')) {
         config.plugins.push(new Webpack.DllReferencePlugin({
