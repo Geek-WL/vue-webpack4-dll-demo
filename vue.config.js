@@ -7,8 +7,9 @@ const dllPath = path.resolve(__dirname, 'dll')
 const dllFiles = fs.readdirSync(dllPath)
 
 module.exports = {
-  // entry: './src/main.js',
-  // output: 'dist',
+  // entry: './src/main.js', // vu-cli中默认 main.js
+  // outputDir: 'dist', // 默认
+  // assetsDir: 'static', // 放置生成的静态资源 (js、css、img、fonts) 默认 /
   productionSourceMap: false, // 不需要生产环境的source map，加速构建
   devServer: {
     open: true, // 自动打开浏览器
